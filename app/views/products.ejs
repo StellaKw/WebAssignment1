@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+    <style>
+        /*
+        Student name: Stella Kwate
+        Student Id: 301262367
+        File name: WEEK3F
+        Date : 30/09/2023
+        */
+        /* Add background color to the navbar */
+        .navbar {
+            background-color: bisque;
+        }
+
+        /* Space out the navbar items and remove the bullet points */
+        ul.navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 20px; /* Adjust the spacing between navbar items */
+            justify-content: flex-end; /* Align items to the right */
+            font-size: 20px;
+        }
+
+        ul.navbar-nav li {
+            /* No need for display: inline-block; or float: right; */
+        }
+
+        a:link {
+            text-decoration: underline;
+        }
+        a:visited {
+            text-decoration: underline;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        a:active {
+            text-decoration: none;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px;
+        }
+        footer .navbar-text {
+            margin-bottom: 0;
+        }
+        .padding{
+            padding-left: 25%;
+            padding-right: 25%;
+            
+        }
+        .display-4{
+        color: red;
+        
+       }
+       #push{
+        text-align: center;
+       }
+    </style>
+</head>
+<body class="padding">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <img src="/img/logo.png" alt="logo" style="width: 60px; height: 50px">
+        <a class="navbar-brand" href="#">COMP229</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto"> <!-- Changed class to ml-auto for right alignment -->
+                <% if (title=="Home"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/"><i class="fas fa-lg fa-laptop-house"></i>Home</a>
+                </li>
+                <% if (title=="About"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/about"><i class="fa-solid fa-address-card"></i>About</a>
+                </li>
+                <% if (title=="Contact"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/contact"><i class="fa-solid fa-address-book"></i>Contact</a>
+                </li>
+                <% if (title=="Product"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/products"><i class="fa-brands fa-product-hunt"></i>Product</a>
+                </li>
+                <% if (title=="Services"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/services"><i class="fa-brands fa-servicestack"></i>Services</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="container" >
+  <div class="jumbotron">
+    <h1 class="display-4" id="push">Welcome to <%= title %> page</h1>
+
+  
+  <p><ol><b><li>Project 1: E-commerce Website Development:</b></li></ol><br>
+    <img src="/img/project1.png" alt="logo" style="width: 240px; height: 160px;float: right;" >
+    Role: Full-stack Developer<br>
+    Description: I was part of a team responsible for developing<br>
+    an e-commerce website for a client in the fashion industry.<br>
+    My role involved designing and implementing the front-end<br>
+      using HTML, CSS, and JavaScript, as well as integrating <br>
+      payment gateways and order processing on the back-end. The<br>
+       outcome was a user-friendly website that allowed customers<br>
+       to browse and purchase products seamlessly.
+       
+  </p>
+  <p><ol><b><li>Project 2: Mobile App for Task Management</li></b></ol><br>
+    <img src="/img/project2.png" alt="logo" style="width: 240px; height: 150px;float: right;" >
+    Role:Role: Mobile App Developer <br>
+    Description: In this project, I worked as a mobile app developer<br>
+     to create a task management app for both Android and iOS platforms.<br>
+      I used React Native to build the app, allowing for cross-platform <br>
+      compatibility. The app allowed users to create, organize, and track<br>
+       tasks efficiently. It was well-received and had thousands of downl<br>
+       oads on app stores.
+  </p>
+  <p><ol><b><li>Project 3: Open-source Contribution</li></b></ol><br>
+    <img src="/img/project3.png" alt="logo" style="width: 240px; height: 160px;float: right;" >
+    Role: Contributor<br>
+    Description: As a passionate open-source enthusiast, I actively <br>
+    contributed to an open-source project related to web development<br>
+    frameworks.fixedbugs, added new features, and improved document-<br>
+    ation. This project had a vibrant community of developers world<br>
+    wide, and my contributionswere recognized and merged into the <br>
+    main codebase.
+    
+  </p>
+    </div>
+    </main>
+        <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        
+        <h4 class="display-6 navbar-text">&copy;2023 All rights reserved to Stella Kwate Paule Leslie</h4>
+        </div>
+        </nav>
+        </footer>
+        <script src="/jquery/dist/jquery.min.js"></script>
+        <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+        </body>
+        </html>
